@@ -17,14 +17,14 @@ const FileUpload: React.FC = () => {
     setMessage("");
     setLastUploaded(0);
     setTotalTime(0);
-    setStartTime(Date.now()); // ✅ RESET LẠI startTime
+    setStartTime(Date.now()); 
     if (e.target.files) setFile(e.target.files[0]);
   };
 
   const handleUpload = () => {
     if (!file) return;
 
-    setStartTime(Date.now()); // ✅ GHI NHẬN THỜI GIAN BẮT ĐẦU KHI UPLOAD
+    setStartTime(Date.now()); 
     setTotalTime(0);
 
     const upload = new tus.Upload(file, {
